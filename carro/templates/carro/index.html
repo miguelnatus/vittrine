@@ -1,0 +1,69 @@
+{% extends 'global/base.html' %}
+
+{% block content %}
+
+
+
+<section class="topo">
+  <h1>VITTRINE DO AUTOMÓVEL</h1>
+  <div></div>
+  <p>Welcome to car sale, where we take your cravings to a whole new level! Our mouthwatering burgers are made from 100% beef and are served on freshly baked buns.</p>
+</section>
+<section class="destaque">
+  <h2>DESTAQUE DO MÊS</h2>
+    <img>
+    <ul>
+        <li>
+            <h3></h3>
+            <div></div>
+            <p></p>
+        </li>
+        <li>
+            <h3></h3>
+            <div></div>
+            <p></p>
+        </li>
+        <li>
+            <h3></h3>
+            <div></div>
+            <p></p>
+        </li>
+        <li>
+            <h3></h3>
+            <div></div>
+            <p></p>
+        </li>
+    </ul>
+</section>
+<section class="estoque">
+  <h1></h1>
+  <p></p>
+    <div class="listaEstoque">
+      {% for carro in carros  %}
+        <div class="carro">
+            <div class="carroBarra"></div>
+            <div class="tituloCarro">
+                <h2>{{carro.carro_modelo}} {{carro.motor}} {{carro.ano}}</h2>
+            </div>
+            <div class="imagemCarro">
+                <img src="{{carro.picture.url}}">
+            </div>
+            <div class="infoCarro">
+                <div class="valorCarro">
+                    <p class="precoCarro">{{carro.valor}}</p>
+                    <p>{{carro.valor_description}}</p>
+                </div>
+                <div class="ctaCarro">
+                    <a href="#" class="whats">WhatsApp</a>
+                    <a href="" class="local">Visite nossa loja</a>
+                </div>
+            </div>
+        </div>
+      {% endfor %}
+        
+    </div>
+  <a href="#" class="mostrarMais">Mostrar mais</a>
+</section>
+
+
+{% endblock %}
