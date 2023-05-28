@@ -1,0 +1,129 @@
+.mainFont{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+nav{
+    position:fixed;
+}
+main{
+    width:100vw;
+    max-width:100%;
+    height:auto;
+}
+.topo{
+    width:100%;
+    height:60vh;
+    background-color: red;
+}
+.destaque{
+    width:100%;
+    height:60vh;
+    background-color: rgb(17, 170, 175);
+}
+.listaEstoque{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.carro{
+    width:20%;
+    min-width:275px;
+    background-color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 40px;
+    border-radius: 8px;
+    position: relative;
+    padding-bottom: 15px;
+    -webkit-box-shadow: 3px 3px 10px -3px rgba(0,0,0,0.75);
+    -moz-box-shadow: 3px 3px 10px -3px rgba(0,0,0,0.75);
+    box-shadow: 3px 3px 10px -3px rgba(0,0,0,0.75);
+}
+
+.carroBarra{
+    width:100%;
+    height:5px;
+    background-color: #FBB03B;
+    position: absolute;
+    top:0;
+    border-radius: 8px 8px 0 0;
+}
+
+.tituloCarro{
+    width:80%;
+    margin:15px auto 0;
+    font-weight: 900;
+}
+
+.imagemCarro{
+    width:80%;
+    margin:0 auto 10px;
+}
+
+.imagemCarro img{
+    width:100%;
+}
+
+.infoCarro{
+    width:80%;
+    display: flex;
+    margin: 0 auto;
+}
+
+.infoCarro .valorCarro{
+    width:50%;
+    margin-right: 10px;
+}
+
+.infoCarro .valorCarro .precoCarro{
+    font-weight: 900;
+    font-size:1em;
+    margin-bottom:5px;
+}
+
+.infoCarro .valorCarro p{
+    font-size:0.7em;
+}
+
+
+.infoCarro .ctaCarro{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.infoCarro .ctaCarro a{
+    display: block;
+    text-decoration: none;
+    font-size:0.75em;
+    padding:5px;
+    text-align: center;
+    border-radius:3px;
+
+}
+
+.infoCarro .ctaCarro a.whats{
+    background:#FBB03B;
+    color:black;
+}
+
+.infoCarro .ctaCarro a.local{
+    background:#000000;
+    color:white;
+}
+
+.estoque a.mostrarMais{
+    margin: 40px auto;
+    display: block;
+    width: fit-content;
+}
+
+footer{
+    width:100vw;
+    max-width:100%;
+    height:250px;
+    background-color: #707070;
+}
