@@ -4,10 +4,12 @@
 
 
 
-<section class="topo">
-  <h1>VITTRINE DO AUTOMÓVEL</h1>
-  <div></div>
-  <p>Welcome to car sale, where we take your cravings to a whole new level! Our mouthwatering burgers are made from 100% beef and are served on freshly baked buns.</p>
+<section id="topo">
+  {% for banner in banners %}
+   <div style="background-image:url({{banner.imagem.url}})">
+
+   </div>
+  {% endfor %}
 </section>
 <section class="destaque">
   <h2>DESTAQUE DO MÊS</h2>
