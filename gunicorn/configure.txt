@@ -1,0 +1,75 @@
+###############################################################################
+# Replace
+# vittrine to the name of the gunicorn file you want
+# root to your user name
+# vittrine to the folder name of your project
+# project to the folder name where you find a file called wsgi.py
+#
+###############################################################################
+# Criando o arquivo vittrine.socket
+sudo nano /etc/systemd/system/gunicorn.socket
+
+###############################################################################
+# Conteúdo do arquivo
+[Unit]
+Description=gunicorn blog socket
+
+[Socket]
+ListenStream=/run/gunicorn.socket
+
+[Install]
+WantedBy=sockets.target
+
+###############################################################################
+# Criando o arquivo vittrine.service
+sudo nano /etc/systemd/system/vittrine.service
+
+###############################################################################
+# Conteúdo do arquivo
+[Unit]
+Description=Gunicorn daemon (You can change if you want)
+Requires=gunicorn.socket
+After=network.target
+
+[Service]
+User=root
+Group=www-data
+Restart=on-failure
+EnvironmentFile=/root/vittrine/.env
+WorkingDirectory=/root/vittrine
+# --error-logfile --enable-stdio-inheritance --log-level and --capture-output
+# are all for debugging purposes.
+ExecStart=/root/vittrine/venv/bin/gunicorn \
+          --error-logfile /root/vittrine/gunicorn-error-log \
+          --enable-stdio-inheritance \
+          --log-level "debug" \
+          --capture-output \
+          --access-logfile - \
+          --workers 6 \
+          --bind unix:/run/vittrine.socket \
+          project.wsgi:application
+
+[Install]
+WantedBy=multi-user.target
+
+###############################################################################
+# Ativando
+sudo systemctl start vittrine.socket
+sudo systemctl enable vittrine.socket
+
+# Checando
+sudo systemctl status vittrine.socket
+curl --unix-socket /run/vittrine.socket localhost
+sudo systemctl status vittrine
+
+# Restarting
+sudo systemctl restart vittrine.service
+sudo systemctl restart vittrine.socket
+sudo systemctl restart vittrine
+
+# After changing something
+sudo systemctl daemon-reload
+
+# Debugging
+sudo journalctl -u vittrine.service
+sudo journalctl -u vittrine.socket
