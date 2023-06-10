@@ -20,7 +20,7 @@ class Banner(models.Model):
 
 
     def __str__(self):
-        return f'{self.imagem} {self.titulo}'
+        return f'{self.imagem} {self.titulo} {self.texto}'
 
     class Meta:
         verbose_name = 'Banner'

@@ -8,7 +8,7 @@ header .container{
 
 .logo-vittrine {
     float: left;
-    padding-top: 15px;
+    padding-top: 10px;
 }
 
 #topo{
@@ -29,8 +29,7 @@ header{
     height: 70px;
     width: 100%;
     position: absolute;
-    background-color: #000;
-    opacity: 0.7;
+    background-color: rgba(0,0,0,0.75);
 }
 
 
@@ -63,11 +62,13 @@ header nav#menu ul li{
 
 header nav#menu li a{
     color: #fff;
-    
+    transition: all 0.5s ease-out;
+    text-decoration: none;
 }
 
 header nav#menu li a:hover{
     color: #FBB03B;
+    
 }
 /* nav{
     position:fixed;
