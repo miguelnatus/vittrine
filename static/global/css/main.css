@@ -109,6 +109,11 @@ main{
     flex-direction: row;
     justify-content: space-evenly;
     flex-wrap: wrap;
+    background-color: #eff2f6;
+    background-image: url(../img/carros.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
 }
 
 .carro{
@@ -217,11 +222,22 @@ footer img{
     padding-bottom: 100px;
 }
 
-footer .footer-logo{
+footer .linha{
     border-bottom: 2px solid #FBB03B;
 }
 
 footer p{
     padding: 30px 0 30px 0;
     font-size: 14px;
+}
+
+footer .terms{
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+}
+
+footer .terms a{
+    color: #fff;
+    padding-right: 30px;
 }
