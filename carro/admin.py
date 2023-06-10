@@ -27,7 +27,7 @@ class CarroAdmin(admin.ModelAdmin):
 
 @admin.register(models.Banner)
 class BannerAdmin(admin.ModelAdmin):
-    list_display = 'imagem', 'titulo',
+    list_display = 'id', 'imagem', 'titulo',
     ordering = 'id',
 
 @admin.register(models.Categoria)

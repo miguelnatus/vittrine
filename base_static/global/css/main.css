@@ -22,8 +22,25 @@ header .container{
     height: 100%;
     background-size: cover;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
 }
 
+#topo h1{
+    color: #fff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 55px;
+    text-transform: uppercase;
+}
+
+#topo p{
+    color: #fff;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    width: 50%;
+    font-size: 18px;
+    line-height: 28px;
+    padding-top: 30px;
+}
 
 header{
     height: 70px;

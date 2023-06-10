@@ -4,10 +4,13 @@
 
 
 
-<section id="topo">
+<section id="topo" class="mainFont">
   {% for banner in banners %}
    <div style="background-image:url({{banner.imagem.url}})">
-
+       <div class="container">
+        <h1>{{banner.titulo}}</h1>
+        <p>{{banner.texto}}</p>
+       </div>
    </div>
   {% endfor %}
 </section>
