@@ -208,6 +208,20 @@ main{
 footer{
     width:100vw;
     max-width:100%;
-    height:250px;
+    color: #fff;
     background-color: #707070;
+}
+
+footer img{
+    padding-top: 50px;
+    padding-bottom: 100px;
+}
+
+footer .footer-logo{
+    border-bottom: 2px solid #FBB03B;
+}
+
+footer p{
+    padding: 30px 0 30px 0;
+    font-size: 14px;
 }
