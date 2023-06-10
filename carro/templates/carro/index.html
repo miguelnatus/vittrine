@@ -46,30 +46,28 @@
     <div class="listaEstoque">
       <div class="container">
         <div class="row">
-          {% for carro in carros  %}
-            <div class="carro">
-              <a href="">
-                  <div class="carroBarra"></div>
-                    <div class="tituloCarro">
-                        <h2>{{carro.carro_modelo}} {{carro.motor}} {{carro.ano}}</h2>
-                    </div>
-                    <div class="imagemCarro">
-                        <img src="{{carro.picture.url}}">
-                    </div>
-                    <div class="infoCarro">
-                        <div class="valorCarro">
-                            <p class="precoCarro">{{carro.valor}}</p>
-                            <p>{{carro.valor_description}}</p>
-                        </div>
-                        <div class="ctaCarro">
-                            <a href="#" class="whats">WhatsApp</a>
-                            <a href="" class="local">Visite nossa loja</a>
-                        </div>
-                    </div>
-                </div>
-              </a>
-          {% endfor %}
-        
+        {% for carro in carros  %}
+          <div class="carro">
+              <div class="carroBarra"></div>
+              <div class="tituloCarro">
+                  <h2>{{carro.carro_modelo}} {{carro.motor}} {{carro.ano}}</h2>
+              </div>
+              <div class="imagemCarro">
+                  <img src="{{carro.picture.url}}">
+              </div>
+              <div class="infoCarro">
+                  <div class="valorCarro">
+                      <p class="precoCarro">{{carro.valor}}</p>
+                      <p>{{carro.valor_description}}</p>
+                  </div>
+                  <div class="ctaCarro">
+                      <a href="#" class="whats">WhatsApp</a>
+                      <a href="" class="local">Visite nossa loja</a>
+                  </div>
+              </div>
+          </div>
+        {% endfor %}
+        </div>
       </div> 
     </div>
   <!-- <a href="#" class="mostrarMais">Mostrar mais</a> -->

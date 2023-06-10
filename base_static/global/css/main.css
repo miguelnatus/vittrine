@@ -113,7 +113,7 @@ main{
     background-image: url(../img/carros.jpg);
     background-repeat: no-repeat;
     background-position: bottom;
-    background-size: cover;
+    /* background-size: cover; */
     justify-content: space-between;
 }
 
