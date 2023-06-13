@@ -77,17 +77,28 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.mysql',
+#         'NAME': 'revenda',
+#         'USER': 'root',
+#         'PASSWORD': 'root',
+#         'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+#         'PORT': '3306',
+#     }
+# }
+
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'revenda',
-        'USER': 'root',
-        'PASSWORD': 'root',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+        'NAME': 'vittrine',
+        'USER': 'vittrine',
+        'PASSWORD': 'Ozoutros@123',
+        'HOST': '191.252.214.204',   # Or an IP Address that your DB is hosted on
         'PORT': '3306',
     }
 }
-
+	
 
 
 # Password validation

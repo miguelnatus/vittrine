@@ -6,10 +6,10 @@ def index(request):
     banners = Banner.objects.all()
     return render(request, 'carro/index.html', {'carros':carros,'banners':banners})
 
-def carro_view(request, id):
-    carro = get_object_or_404(Carro, id=id)
+def carro(request, slug):
+    carro = get_object_or_404(Carro, slug=slug)
     photos = CarroImage.objects.filter(carro=carro)
-    return render(request, 'detail.html', {
+    return render(request, 'carro/carro.html', {
         'carro':carro,
         'photos':photos
     })

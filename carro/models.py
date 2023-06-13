@@ -1,7 +1,16 @@
 from django.db import models
 from django.utils import timezone
 from djmoney.models.fields import MoneyField
+from django.urls import reverse
+from django.template.defaultfilters import slugify
 
+def create_slug(carro_modelo): # new
+       slug = slugify(carro_modelo)
+       qs = Carro.objects.filter(slug=slug)
+       exists = qs.exists()
+       if exists:
+           slug = "%s-%s" %(slug, qs.first().id)
+       return slug
 
 class Categoria(models.Model):
     name = models.CharField(max_length=50)
@@ -40,6 +49,7 @@ class Carro(models.Model):
     description = models.TextField(blank=True)
     show = models.BooleanField(default=True)
     picture = models.ImageField(blank=True, upload_to='picture/%Y/%m')
+    slug = models.SlugField(null=True, blank=True, unique=True)
     categoria = models.ForeignKey(
         Categoria, 
         on_delete=models.SET_NULL,
@@ -55,6 +65,14 @@ class Carro(models.Model):
 
     def __str__(self) -> str:
         return f'{self.marca} {self.carro_modelo}'
+    
+    def get_absolute_url(self):
+      return reverse('carro_modelo', kwargs={'slug': self.slug})
+    
+    def save(self, *args, **kwargs): # new
+         if not self.slug:
+            self.slug = create_slug(self.carro_modelo)
+         return super().save(*args, **kwargs)
     
 
 class CarroImage(models.Model):

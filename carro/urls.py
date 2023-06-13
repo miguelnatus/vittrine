@@ -13,5 +13,5 @@ app_name = 'carro'
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('<int:id>/', views.carro_view, name='carro_view')
+    path('carro/<slug:slug>/', views.carro, name='carro')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

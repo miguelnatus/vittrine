@@ -4,6 +4,7 @@ from django.contrib import admin
 from django.contrib import admin
 from carro import models
 from .models import Carro, CarroImage, Banner
+from django.template.defaultfilters import slugify
 
 
 class CarroImageAdmin(admin.StackedInline):
@@ -22,6 +23,8 @@ class CarroAdmin(admin.ModelAdmin):
     list_max_show_all = 200
     list_editable = 'carro_modelo',
     list_display_links = 'id',
+    # prepopulated_fields = {"slug": "carro_modelo"}
+    prepopulated_fields = {'slug': ('carro_modelo',)}
     class Meta:
        model = Carro
 
