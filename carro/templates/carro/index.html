@@ -56,7 +56,9 @@
                       <h2>{{carro.carro_modelo}} {{carro.motor}} {{carro.ano}}</h2>
                   </div>
                   <div class="imagemCarro">
+                      {% if carro.picture %}
                       <img src="{{carro.picture.url}}" />
+                      {% endif %}
                   </div>
                 </a>
                 <div class="infoCarro">
