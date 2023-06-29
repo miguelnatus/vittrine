@@ -2,13 +2,29 @@
 
 {% block content %}
 
-<section id="carro">
+<section id="carro" class="mainFont">
     <div class="container">
         <div class="row">
             
-            <div class="info-carro col-4">
+            <div class="info-carro col-sm-4">
                 <h1 class="nomeCarro">{{carro.carro_modelo}}</h1>
-                <div class="barraAmarela" style="width: 153.6px;"></div>
+                <div class="barraAmarela" ></div>
+            </div>
+            <div class="fotos-carro owl-carousel col-sm-8">
+                {% for photo in photos %}
+                <div class="item" data-hash="car{{ forloop.counter }}">
+                    <img src="{{photo.images.url}}" alt="">
+                </div>
+                {% endfor %}
+            </div>
+            <div class="link-hash col-sm-8 offset-sm-4">
+                {% for photo in photos %}
+                <div class="column car{{ forloop.counter }}">
+                    <a class="button secondary url" href="#car{{ forloop.counter }}">
+                        <img src="{{photo.images.url}}" class="img-thumbnail" alt="">
+                    </a>
+                </div>
+                {% endfor %}
             </div>
            
         </div>

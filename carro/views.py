@@ -9,9 +9,15 @@ def index(request):
 
 def carro(request, slug):
     carro = get_object_or_404(Carro, slug=slug)
-    photos = CarroImage.objects.filter(carro=carro)
+    page = 'carro'
+    # photos = CarroImage.objects.filter(carro=carro)
+   
+    # photos = get_object_or_404(CarroImage, carro_id=carro.id)
+    photos = CarroImage.objects.filter(carro_id=carro.id)
+    print(photos)
     return render(request, 'carro/carro.html', {
         'carro':carro,
-        'photos':photos
+        'photos':photos,
+        'page': page
     })
    
