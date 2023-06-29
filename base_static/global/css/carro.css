@@ -28,15 +28,28 @@ section#carro h1::after{
 
 .link-hash {
     /* margin: 0 auto; */
-    /* padding-top: 50px; */
+    /* padding-bottom: 40px; */
     display: flex;
     max-width: 100%;
     justify-content: center;
     /* height: 150px; */
+    padding: 0 90px 40px 90px;
 }
 
 .link-hash .column {
     /* margin: 5px; */
     /* width: 20%; */
     position: relative;
+}
+
+.owl-item{
+    padding: 0 80px 0 80px;
+}
+
+.link-hash .column img {
+    opacity: .4;
+}
+
+.column.active img{
+    opacity: 1;
 }

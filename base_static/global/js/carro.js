@@ -10,4 +10,13 @@ $(document).ready(function(){
         startPosition: 'URLHash'
     });
 
+    hash = 'car1';
+    var carActive = '.link-hash .column.'+hash;
+    $(carActive).addClass('active');
+    
+    $('.link-hash .column').click(function(){
+       $('.link-hash .column').removeClass('active');
+       $(this).addClass('active');
+    });
+
 });
