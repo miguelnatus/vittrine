@@ -256,30 +256,9 @@ footer .terms a{
 
 /* Carro  */
 
-#carro{
-    height: 100vh;
-    /* display: flex;
-    align-items: flex-start; */
-}
 
 /* #carro .infoCarro {
     width: 30%;
     height: 100%;
 } */
 
-/* section.carroDestaque {
-    display: flex;
-    height: 70vh;
-} */
-
-#carro .infoCarro h1 {
-    font-weight: 900;
-    font-size: 2.3em;
-    /* padding: 100px 50px 5px; */
-}
-
-#carro .infoCarro .barraAmarela {
-    margin-left: 47px;
-    height: 6px;
-    background-color: rgb(251, 176, 59);
-}

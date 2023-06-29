@@ -1,0 +1,55 @@
+header{
+    height: 70px;
+    width: 100%;
+    position: absolute;
+    background-color: rgb(0,0,0);
+}
+
+section#carro{
+    padding-top: 100px;
+}
+
+section#carro h1{
+    font-weight: 700;
+    font-size: 40px;
+    position: relative;
+    padding-top: 70px;
+}
+
+section#carro h1::after{
+    content: '';
+    position: absolute;
+    background-color: #fbb03b;
+    height: 6px;
+    width: 50%;
+    bottom: -15px;
+    left: 0;
+}
+
+.link-hash {
+    /* margin: 0 auto; */
+    /* padding-bottom: 40px; */
+    display: flex;
+    max-width: 100%;
+    justify-content: center;
+    /* height: 150px; */
+    padding: 0 90px 40px 90px;
+}
+
+.link-hash .column {
+    /* margin: 5px; */
+    /* width: 20%; */
+    position: relative;
+}
+
+.owl-item{
+    padding: 0 80px 0 80px;
+}
+
+.link-hash .column img {
+    opacity: .4;
+}
+
+.column.active img{
+    opacity: 1;
+}
