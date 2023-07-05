@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Carro, CarroImage, Banner
 from django.shortcuts import get_object_or_404
+from django.http import JsonResponse
 def index(request):
     carros = Carro.objects.all()
     print(carros)
@@ -20,4 +21,8 @@ def carro(request, slug):
         'photos':photos,
         'page': page
     })
-   
+
+def carroJson(request):
+    carros = list(Carro.objects.values())
+    return JsonResponse({'data': carros}, safe=False)
+

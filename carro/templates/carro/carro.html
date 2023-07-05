@@ -9,6 +9,9 @@
             <div class="info-carro col-sm-4">
                 <h1 class="nomeCarro">{{carro.carro_modelo}}</h1>
                 <div class="barraAmarela" ></div>
+                <p>
+                    {{carro.description|linebreaks}}
+                </p>
             </div>
             <div class="fotos-carro owl-carousel col-sm-8">
                 {% for photo in photos %}

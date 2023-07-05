@@ -16,6 +16,12 @@ section#carro h1{
     padding-top: 70px;
 }
 
+section#carro p {
+    padding-top: 20px;
+    font-size: 20px;
+    line-height: 28px;
+}
+
 section#carro h1::after{
     content: '';
     position: absolute;

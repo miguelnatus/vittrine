@@ -19,4 +19,15 @@ $(document).ready(function(){
        $(this).addClass('active');
     });
 
+    $.ajax({
+        type: 'GET',
+        url: '/carros-json',
+        success: function name(response) {
+            console.log(response);
+        },
+        error: function name(error) {
+            console.log(error);
+        }
+    });
+
 });

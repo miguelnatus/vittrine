@@ -6,12 +6,10 @@ from django.conf.urls.static import static
 
 app_name = 'carro'
 
-# urlpatterns = [
-#     path('', views.index, name='index'),
-# ]
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index, name='index'),
-    path('carro/<slug:slug>/', views.carro, name='carro')
+    path('carro/<slug:slug>/', views.carro, name='carro'),
+    path('carros-json/', views.carroJson, name='carros-list-view')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
