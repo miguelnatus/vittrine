@@ -44,7 +44,7 @@ section#carro .info-carro a.whatsCarro{
     font-weight: 800;
 }
 
-section#carro .info-carro a.whatsCarro::after{
+section#carro .info-carro a.whatsCarro::before{
     content:url('../img/whatsIcon.png');
     position:relative;
     z-index:100000; 
