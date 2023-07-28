@@ -45,7 +45,7 @@ section#carro .info-carro a.whatsCarro{
 }
 
 section#carro .info-carro a.whatsCarro::after{
-    content:url('../img/icon.png');
+    content:url('../img/whatsIcon.png');
     position:relative;
     z-index:100000; 
     left:-50px;
