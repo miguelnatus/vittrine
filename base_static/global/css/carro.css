@@ -36,7 +36,10 @@ section#carro .info-carro a.whatsCarro{
     background: #FBB03B;
     color: black;
     margin-bottom: 8px;
-    padding:5px 10px;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 22px;
 }
 
 .link-hash {
