@@ -1,3 +1,8 @@
+section#carro .info-carro a.whatsCarro{
+    background: #FBB03B !important;
+    color: black;
+    margin-bottom: 8px;
+}
 .mainFont{
     font-family: 'Plus Jakarta Sans', sans-serif;
 }
