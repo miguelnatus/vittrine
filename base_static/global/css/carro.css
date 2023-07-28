@@ -44,6 +44,14 @@ section#carro .info-carro a.whatsCarro{
     font-weight: 800;
 }
 
+section#carro .info-carro a.whatsCarro::after{
+    content:url('../img/icon.png');
+    position:relative;
+    z-index:100000; 
+    left:-50px;
+    top:10px;
+  }
+
 .link-hash {
     /* margin: 0 auto; */
     /* padding-bottom: 40px; */
