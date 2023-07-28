@@ -32,7 +32,7 @@ section#carro h1::after{
     left: 0;
 }
 
-section#carro a{
+section#carro .info-carro a.whatsCarro{
     background: #FBB03B;
     color: black;
     margin-bottom: 8px;
