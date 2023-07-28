@@ -32,13 +32,6 @@ section#carro h1::after{
     left: 0;
 }
 
-
-section#carro a{
-    background: #FBB03B;
-    color: black;
-    margin-bottom: 8px;
-}
-
 .link-hash {
     /* margin: 0 auto; */
     /* padding-bottom: 40px; */
