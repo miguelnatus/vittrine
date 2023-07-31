@@ -42,14 +42,15 @@ section#carro .info-carro a.whatsCarro{
     display: block;
     text-align: center;
     font-weight: 800;
+    position:relative;
 }
 
 section#carro .info-carro a.whatsCarro::before{
     content:url('../img/whatsIcon.png');
-    position:relative;
+    position:absolute;
     z-index:100000; 
-    left:-50px;
-    top:10px;
+    left: 43px;
+    top: 12px;
   }
 
 .link-hash {
