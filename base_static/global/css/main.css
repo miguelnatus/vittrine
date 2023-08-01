@@ -51,7 +51,9 @@ header .container{
     right: 35px;
     border-radius: 5px;
     font-size: 1.3em;
-    font-weight: 800;
+    font-weight: 600;
+    width: 200px;
+    text-align: center;
     -webkit-box-shadow: 10px 10px 23px -6px rgba(0,0,0,0.57);
     -moz-box-shadow: 10px 10px 23px -6px rgba(0,0,0,0.57);
     box-shadow: 10px 10px 23px -6px rgba(0,0,0,0.57);
@@ -60,9 +62,12 @@ header .container{
     content:url('../img/whatsIcon.png');
     position:absolute;
     z-index:100000; 
-    left: 43px;
-    top: 12px;
-  }
+    left: 10px;
+    top: 7px;
+}
+.linkHome:hover{
+    color: black;
+}
 
 header{
     height: 70px;
