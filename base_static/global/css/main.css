@@ -56,6 +56,14 @@ header .container{
     -moz-box-shadow: 10px 10px 23px -6px rgba(0,0,0,0.57);
     box-shadow: 10px 10px 23px -6px rgba(0,0,0,0.57);
 }
+.linkHome::before{
+    content:url('../img/whatsIcon.png');
+    position:absolute;
+    z-index:100000; 
+    left: 43px;
+    top: 12px;
+  }
+
 header{
     height: 70px;
     width: 100%;
