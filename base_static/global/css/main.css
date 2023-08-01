@@ -57,6 +57,7 @@ header .container{
     -webkit-box-shadow: 10px 10px 23px -6px rgba(0,0,0,0.57);
     -moz-box-shadow: 10px 10px 23px -6px rgba(0,0,0,0.57);
     box-shadow: 10px 10px 23px -6px rgba(0,0,0,0.57);
+    z-index:1000;
 }
 .linkHome::before{
     content:url('../img/whatsIcon.png');
