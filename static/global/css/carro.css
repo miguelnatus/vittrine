@@ -32,6 +32,27 @@ section#carro h1::after{
     left: 0;
 }
 
+section#carro .info-carro a.whatsCarro{
+    color: black;
+    margin-bottom: 8px;
+    padding: 20px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
+    text-align: center;
+    font-weight: 800;
+    position:relative;
+}
+
+section#carro .info-carro a.whatsCarro::before{
+    content:url('../img/whatsIcon.png');
+    position:absolute;
+    z-index:100000; 
+    left: 43px;
+    top: 12px;
+  }
+
 .link-hash {
     /* margin: 0 auto; */
     /* padding-bottom: 40px; */
