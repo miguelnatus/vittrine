@@ -122,6 +122,10 @@ main{
     /* background-size: cover; */
     justify-content: space-between;
 }
+.listaEstoque::after {
+    content: "";
+    flex: auto;
+  }
 
 .carro {
     background-color: white;
