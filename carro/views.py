@@ -4,7 +4,7 @@ from django.shortcuts import get_object_or_404
 from django.http import JsonResponse
 def index(request):
     carros = Carro.objects.all()
-    print(carros)
+    # print(carros)
     banners = Banner.objects.all()
     return render(request, 'carro/index.html', {'carros':carros,'banners':banners})
 

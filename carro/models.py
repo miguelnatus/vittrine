@@ -21,6 +21,15 @@ class Marca(models.Model):
     name = models.CharField(max_length=50)
     def __str__(self) -> str:
         return self.name
+    class Meta:
+        verbose_name = 'Cor'
+        verbose_name_plural = 'Cores'
+    
+class Cor(models.Model):
+    name = models.CharField(max_length=100)
+    def __str__(self) -> str:
+        return self.name
+
     
 class Banner(models.Model):
     imagem = models.ImageField(blank=True, upload_to='picture/%Y/%m')
@@ -62,6 +71,7 @@ class Carro(models.Model):
         blank=True,
         null=True
     )
+    cor = models.ForeignKey(Cor, on_delete=models.CASCADE)
 
     def __str__(self) -> str:
         return f'{self.marca} {self.carro_modelo}'
@@ -81,6 +91,9 @@ class CarroImage(models.Model):
  
     def __str__(self):
         return self.carro.carro_modelo
+    
+
+    
 
 
 

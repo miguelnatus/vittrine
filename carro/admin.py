@@ -3,7 +3,7 @@ from django.contrib import admin
 # Register your models here.
 from django.contrib import admin
 from carro import models
-from .models import Carro, CarroImage, Banner
+from .models import Carro, CarroImage, Banner, Cor
 from django.template.defaultfilters import slugify
 
 
@@ -40,6 +40,11 @@ class CategoriaAdmin(admin.ModelAdmin):
 
 @admin.register(models.Marca)
 class MarcaAdmin(admin.ModelAdmin):
+    list_display = 'name',
+    ordering = 'id',
+
+@admin.register(models.Cor)
+class CorAdmin(admin.ModelAdmin):
     list_display = 'name',
     ordering = 'id',
 
