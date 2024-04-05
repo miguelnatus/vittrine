@@ -22,13 +22,17 @@ class Marca(models.Model):
     def __str__(self) -> str:
         return self.name
     class Meta:
-        verbose_name = 'Cor'
-        verbose_name_plural = 'Cores'
+        verbose_name = 'Marca'
+        verbose_name_plural = 'Marcas'
     
-class Cor(models.Model):
-    name = models.CharField(max_length=100)
-    def __str__(self) -> str:
-        return self.name
+    
+# class Cor(models.Model):
+#     name = models.CharField(max_length=100)
+#     def __str__(self) -> str:
+#         return self.name
+#     class Meta:
+#         verbose_name = 'Cor'
+#         verbose_name_plural = 'Cores'
 
     
 class Banner(models.Model):
@@ -49,6 +53,7 @@ class Banner(models.Model):
 class Carro(models.Model):
     # carro_marca = models.CharField(max_length=50, blank=True)
     carro_modelo = models.CharField(max_length=50)
+    carro_cor = models.CharField(max_length=50)
     ano = models.CharField(max_length=50)
     km = models.CharField(max_length=50)
     valor = MoneyField(max_digits=14, decimal_places=2, default_currency='BRL', null=True, blank=True)
@@ -71,7 +76,7 @@ class Carro(models.Model):
         blank=True,
         null=True
     )
-    cor = models.ForeignKey(Cor, on_delete=models.CASCADE)
+    # cor = models.ForeignKey(Cor, on_delete=models.SET_NULL,blank=True,null=True)
 
     def __str__(self) -> str:
         return f'{self.marca} {self.carro_modelo}'
@@ -91,6 +96,15 @@ class CarroImage(models.Model):
  
     def __str__(self):
         return self.carro.carro_modelo
+    
+class Cor(models.Model):
+    carro = models.ForeignKey(Carro, default=None, on_delete=models.CASCADE)
+    name = models.CharField(max_length=100)
+    def __str__(self) -> str:
+        return self.carro.carro_cor
+    class Meta:
+        verbose_name = 'Cor'
+        verbose_name_plural = 'Cores'
     
 
     

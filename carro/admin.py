@@ -43,10 +43,10 @@ class MarcaAdmin(admin.ModelAdmin):
     list_display = 'name',
     ordering = 'id',
 
-@admin.register(models.Cor)
-class CorAdmin(admin.ModelAdmin):
-    list_display = 'name',
-    ordering = 'id',
+# @admin.register(models.Cor)
+# class CorAdmin(admin.ModelAdmin):
+#     list_display = 'id','name',
+#     ordering = 'id',
 
 @admin.register(CarroImage)
 class CarroImageAdmin(admin.ModelAdmin):
